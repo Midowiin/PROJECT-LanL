@@ -100,12 +100,12 @@ body {
 
 /* GAME TITLE */
 .carousel h1 {
-    transform: translateY(-15px);
+    transform: translateY(-30px);
 
     position: absolute;
     top: -40px;
 
-    font-size: 30px;
+    font-size: 50px;
     color: #b98239;
 
     text-align: center;
@@ -120,7 +120,7 @@ body {
     object-fit: center;
     object-position: center;
 
-    border: 3px solid #56351f;
+    border: 3px solid rgba(217, 155, 56, 0.4);
 }
 
 /* CAROUSEL ARROWS */
@@ -132,11 +132,12 @@ body {
 
     background: #b98239;
     border: circle;
+    border-color: #775221;
 
     font-size: 40px;
     font-weight: bold;
 
-    color: blueviolet;
+    color: #56351f;
 
     cursor: pointer;
     padding: 10px;
@@ -146,7 +147,7 @@ body {
 }
 
 .arrow:hover {
-    color: white;
+    color: #E5B65D;
     transform: translateY(-50%) scale(1.2);
 }
 
@@ -192,8 +193,8 @@ body {
 
     background-color: #f5ebd6;
 
-    border: 2px solid #b98239;
-    border-bottom: 3px solid rgba(217, 155, 56, 0.25);
+    background: rgba(20, 12, 5, 0.85);
+    border: 1px solid rgba(217, 155, 56, 0.4);
 
     padding: 15px 20px;
 
@@ -208,6 +209,23 @@ body {
 
     font-size: 23px;
     color: #b98239;
+
+    position: relative;
+    padding-bottom: 12px;
+}
+
+/* LINE UNDER GAME INFORMATION */
+.game-information h2::after {
+    content: "";
+
+    display: block;
+
+    width: 100%;
+    height: 1px;
+
+    background-color: rgba(217, 155, 56, 0.6);
+
+    margin: 12px auto 0;
 }
 
 /* GAME DETAILS */
@@ -215,24 +233,39 @@ body {
     margin-top: 20px;
     padding: 0 5px;
 
-    color: #56351f;
+    color: #e6dcc8;
 }
 
 .game-details h3 {
-    font-size: 16px;
+    font-size: 25px;
     color: #b98239;
 
     margin-top: 12px;
-    margin-bottom: 3px;
+    margin-bottom: 3px; 
 }
 
 .game-details p {
-    font-size: 13px;
+    font-size: 18px;
     line-height: 1.5;
 
     text-align: justify;
 
     margin-bottom: 7px;
+}
+
+.game-details ol {
+    padding-left: 20px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+
+    color: #e6dcc8;
+    font-size: 18px;
+    line-height: 1.6;
+    text-align: justify;
+}
+
+.game-details ol li {
+    margin-bottom: 5px;
 }
 
 /* RESPONSIVE DESIGN */
