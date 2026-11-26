@@ -1,0 +1,296 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* BACKGROUND AND STYLES */
+body {
+    font-family: Georgia, 'Times New Roman', serif;
+
+    background-image: linear-gradient(to right,rgba(14, 9, 4, 0.92) 0%,rgba(14, 9, 4, 0.72) 55%,rgba(14, 9, 4, 0.55) 100%), url("bg1.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding: 15px 30px 30px;
+}
+
+/* TOP NAVBAR */
+.navbar {
+    width: 100%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 24px 10px;
+    flex-shrink: 0;
+}
+
+.brand {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 1.15rem;
+    letter-spacing: 2px;
+
+    color: #f5ebd6;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.nav-links {
+    display: flex;
+    gap: 32px;
+    list-style: none;
+}
+
+.nav-links a {
+    color: #e6dcc8;
+    text-decoration: none;
+
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+
+    text-transform: uppercase;
+    transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+    color: #d99b38;
+}
+
+/* MAIN LAYOUT */
+.container {
+    transform: translate(5px, 50px);
+
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+
+    width: 100%;
+    max-width: 2500px;
+
+    justify-content: center;
+    align-items: stretch;
+
+    margin: 65px auto 20px;
+}
+
+/* GAME CAROUSEL */
+.carousel {
+    position: relative;
+
+    width: 65%;
+    height: 700px;
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+
+    flex-shrink: 0;
+}
+
+/* GAME TITLE */
+.carousel h1 {
+    transform: translateY(-15px);
+
+    position: absolute;
+    top: -40px;
+
+    font-size: 30px;
+    color: #b98239;
+
+    text-align: center;
+    z-index: 2;
+}
+
+/* GAME IMAGE */
+.carousel img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: center;
+    object-position: center;
+
+    border: 3px solid #56351f;
+}
+
+/* CAROUSEL ARROWS */
+.arrow {
+    position: absolute;
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    background: #b98239;
+    border: circle;
+
+    font-size: 40px;
+    font-weight: bold;
+
+    color: greenyellow;
+
+    cursor: pointer;
+    padding: 10px;
+
+    transition: 0.2s;
+    z-index: 3;
+}
+
+.arrow:hover {
+    color: white;
+    transform: translateY(-50%) scale(1.2);
+}
+
+.arrow.left {
+    left: 10px;
+}
+
+.arrow.right {
+    right: 10px;
+}
+
+/* SLIDE INDICATORS */
+.indicators {
+    position: absolute;
+    bottom: 15px;
+
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+
+    z-index: 3;
+}
+
+.indicators button {
+    width: 11px;
+    height: 11px;
+
+    border: none;
+    border-radius: 50%;
+
+    background-color: white;
+    cursor: pointer;
+}
+
+.indicators button.active {
+    background-color: #b98239;
+}
+
+/* GAME INFORMATION */
+.game-information {
+    width: 33%;
+    height: 700px;
+
+    background-color: #f5ebd6;
+
+    border: 2px solid #b98239;
+    border-bottom: 3px solid rgba(217, 155, 56, 0.25);
+
+    padding: 15px 20px;
+
+    overflow-y: auto;
+
+    flex-shrink: 0;
+}
+
+/* INFORMATION TITLE */
+.game-information h2 {
+    text-align: center;
+
+    font-size: 23px;
+    color: #b98239;
+}
+
+/* GAME DETAILS */
+.game-details {
+    margin-top: 20px;
+    padding: 0 5px;
+
+    color: #56351f;
+}
+
+.game-details h3 {
+    font-size: 16px;
+    color: #b98239;
+
+    margin-top: 12px;
+    margin-bottom: 3px;
+}
+
+.game-details p {
+    font-size: 13px;
+    line-height: 1.5;
+
+    text-align: justify;
+
+    margin-bottom: 7px;
+}
+
+/* RESPONSIVE DESIGN */
+@media screen and (max-width: 900px) {
+
+    .container {
+        width: 95%;
+
+        flex-direction: column;
+        align-items: center;
+
+        margin-top: 65px;
+    }
+
+    .carousel {
+        width: 100%;
+        height: 400px;
+    }
+
+    .game-information {
+        width: 100%;
+        height: 400px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+
+    body {
+        padding: 10px;
+    }
+
+    .navbar {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .nav-links {
+        gap: 15px;
+    }
+
+    .nav-links a {
+        font-size: 10px;
+    }
+
+    .container {
+        transform: translateY(70px);
+    }
+
+    .carousel {
+        height: 280px;
+    }
+
+    .carousel h1 {
+        font-size: 23px;
+        top: -35px;
+    }
+
+    .game-information {
+        height: 350px;
+    }
+}
