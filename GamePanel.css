@@ -132,12 +132,11 @@ body {
 
     background: #b98239;
     border: circle;
-    border-color: #56351f;
 
     font-size: 40px;
     font-weight: bold;
 
-    color: white;
+    color: blueviolet;
 
     cursor: pointer;
     padding: 10px;
